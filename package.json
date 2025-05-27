@@ -1,0 +1,36 @@
+{
+  "name": "play-automacao-bilds",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "show-report": "npx playwright show-report",
+    "test:bdd": "cucumber-js && node config/reporter.js",
+    "test:bdd:dev": "ENV=dev cucumber-js && node config/reporter.js",
+    "test:bdd:test": "ENV=test cucumber-js && node config/reporter.js",
+    "test:bdd:prod": "ENV=prod cucumber-js && node config/reporter.js",
+    "test:bdd:dev:headed": "ENV=dev HEADLESS=false cucumber-js && node config/reporter.js",
+    "test:bdd:test:headed": "ENV=test HEADLESS=false cucumber-js && node config/reporter.js",
+    "report": "node config/reporter.js",
+    "test:with-report": "npx playwright test && npx playwright show-report",
+    "test:bdd:with-report": "cucumber-js && node config/reporter.js && start cucumber-report.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.2.0",
+    "@cucumber/html-formatter": "^21.10.1",
+    "@faker-js/faker": "^9.7.0",
+    "@playwright/test": "^1.52.0",
+    "@types/cucumber": "^7.0.3",
+    "@types/node": "^22.15.3",
+    "allure-playwright": "^3.2.1",
+    "axios": "^1.9.0",
+    "cucumber-html-reporter": "^7.2.0",
+    "dotenv": "^16.5.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}

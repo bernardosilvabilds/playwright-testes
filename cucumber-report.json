@@ -1,0 +1,136 @@
+[
+  {
+    "description": "  Como um novo usuário\n  Quero me cadastrar no sistema\n  Para acessar as funcionalidades",
+    "elements": [
+      {
+        "description": "",
+        "id": "cadastro-de-novo-usuário;cadastro-bem-sucedido",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Cadastro bem-sucedido",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "que estou na página de cadastro",
+            "match": {
+              "location": "features\\step-definitions\\signup.steps.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7475620899
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "eu preencho o nome com \"João Silva9\"",
+            "match": {
+              "location": "features\\step-definitions\\signup.steps.ts:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5100200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "eu preencho o email com \"joao9@exemplo.com\"",
+            "match": {
+              "location": "features\\step-definitions\\signup.steps.ts:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2291999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "eu preencho a senha com \"Senha123!\"",
+            "match": {
+              "location": "features\\step-definitions\\signup.steps.ts:41"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3868799
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "eu preencho a confirmação de senha com \"Senha123!\"",
+            "match": {
+              "location": "features\\step-definitions\\signup.steps.ts:45"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3946300
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "eu aceito os termos e condições",
+            "match": {
+              "location": "features\\step-definitions\\signup.steps.ts:49"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2072400
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "eu clico no botão de criar conta",
+            "match": {
+              "location": "features\\step-definitions\\signup.steps.ts:58"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 360532100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 16,
+            "name": "devo ser redirecionado para a página de login",
+            "match": {
+              "location": "features\\step-definitions\\signup.steps.ts:66"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1921619900
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 482509900
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "cadastro-de-novo-usuário",
+    "line": 3,
+    "keyword": "Feature",
+    "name": "Cadastro de novo usuário",
+    "tags": [],
+    "uri": "features\\signup.feature"
+  }
+]

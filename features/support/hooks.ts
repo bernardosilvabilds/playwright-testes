@@ -1,14 +1,24 @@
 import { Before, After, BeforeAll, AfterAll, AfterStep } from '@cucumber/cucumber';
 import { chromium, Browser, BrowserContext } from '@playwright/test';
+import { createTestUser, deleteTestUser, deleteTestUserById } from '../step-definitions/api/user.helper';
 
 let browser: Browser;
 let context: BrowserContext;
+
+export const testUser = {
+  email: `test_${Date.now()}@testemail.com`,
+  password: 'Asdqwe123!@#',
+  fullname: 'TEst do teste teste',
+  _id: '',
+};
 
 BeforeAll(async function () {
   console.log('Iniciando configuração global...');
   browser = await chromium.launch({
     headless: false
   });
+  const user = await createTestUser(testUser.email, testUser.password, testUser.fullname);
+  testUser._id = user._id;
 });
 
 Before(async function () {
@@ -35,6 +45,9 @@ After(async function (scenario) {
 
 AfterAll(async function () {
   console.log('Finalizando configuração global...');
+  if (testUser._id) {
+    await deleteTestUserById(testUser._id);
+  }
   await browser.close();
 });
 

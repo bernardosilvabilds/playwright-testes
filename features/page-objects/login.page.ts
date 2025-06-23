@@ -17,7 +17,7 @@ export class LoginPage {
   constructor(page: Page) {
     this.page = page;
     this.emailInput = page.getByRole('textbox', { name: 'Email' });
-    this.passwordInput = page.getByRole('textbox', { name: 'Password' });
+    this.passwordInput = page.getByPlaceholder('Senha');
     this.keepLoggedCheckbox = page.getByRole('checkbox', { name: 'Manter logado' });
     this.keepLoggedLabel = page.getByText('Manter logado');
     this.forgotPasswordButton = page.getByRole('button', { name: /esqueceu a senha\?/i });

@@ -1,5 +1,6 @@
 import { Given, Then, setDefaultTimeout } from '@cucumber/cucumber';
 import { expect, chromium, Page } from '@playwright/test';
+import { testUser } from '../support/hooks';
 
 setDefaultTimeout(60 * 1000); // 60 segundos
 
@@ -23,4 +24,11 @@ Then('a página deve carregar corretamente', async function () {
   await expect(this.page).toHaveURL(`${baseUrl}/signIn`);
   // Você pode adicionar mais asserts, como verificar se existe um campo de login
   await this.browser.close();
+});
+
+Given('o usuário de teste foi criado', async function () {
+  if (!testUser.email) {
+    throw new Error('Usuário de teste não foi criado!');
+  }
+  // Aqui você pode adicionar uma chamada real para buscar o usuário, se desejar
 }); 

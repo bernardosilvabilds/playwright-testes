@@ -5,15 +5,17 @@ Feature: Cadastro de novo usuário
   Quero me cadastrar no sistema
   Para acessar as funcionalidades
 
+  #Sempre antes de rodar esse cenario, alterar o campo EMAIL
   Scenario: Cadastro bem-sucedido
     Given que estou na página de cadastro
     When eu preencho o nome com "João Silva9"
-    And eu preencho o email com "joao9@exemplo.com"
+    And eu preencho o email com ""
     And eu preencho a senha com "Senha123!"
     And eu preencho a confirmação de senha com "Senha123!"
     And eu aceito os termos e condições
     And eu clico no botão de criar conta
-    Then devo ser redirecionado para a página de login
+    Then devo ver a mensagem de sucesso de cadastro
+    And devo ser redirecionado para a página de login
 
   Scenario: Cadastro com senha sem letra maiúscula
     Given que estou na página de cadastro
@@ -70,7 +72,7 @@ Feature: Cadastro de novo usuário
   Scenario: Cadastro com email já existente
     Given que estou na página de cadastro
     When eu preencho o nome com "João Silva"
-    And eu preencho o email com "joao@exemplo.com"
+    And eu preencho o email com "joao9@exemplo.com"
     And eu preencho a senha com "Senha123!"
     And eu preencho a confirmação de senha com "Senha123!"
     And eu aceito os termos e condições
